@@ -1,0 +1,270 @@
+/*---------------------------------
+
+  service
+
+  1. service
+    1.1 page__number
+    1.2 service__inner
+        1.2.1 service__content
+        1.2.2 service__omg
+
+---------------------------------*/
+
+/*  
+    1. service
+---------------------------------*/
+.service {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background: #333;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  
+    1.1 page__number
+---------------------------------*/
+.page__number {
+    position: absolute;
+    top: 2.19vw;
+    left: 2.19vw;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: tb-rl;
+    -ms-writing-mode: tb-rl;
+    -o-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.page__number__text {
+    color: #e9e9e9;
+    font-weight: 100;
+    font-size: 7.32vw;
+    & span {
+        color: #60caad;
+    }
+}
+
+/*  
+    1.2 service__inner
+---------------------------------*/
+.service__inner {
+    position: relative;
+    width: 80%;
+    height: 59.51vw;
+}
+
+/*  
+    1.2.1 service__content
+---------------------------------*/
+
+.service__content {
+    position: absolute;
+    top: 5vw;
+    right: 0;
+    z-index: 1;
+    width: 33.67vw;
+}
+
+.service__title {
+    color: #60CAAD;
+    font-weight: 100;
+    font-size: 2.92vw;
+}
+
+.service__text--l {
+    margin-top: 1vw;
+    color: #e9e9e9;
+    font-weight: 100;
+    font-size: 1.92vw;
+    & span {
+        color: $color-green;
+    }
+}
+
+.service__text {
+    margin-top: 1vw;
+    color: #e9e9e9;
+    font-weight: 100;
+    font-size: 1.17vw;
+}
+
+/*  
+    1.2.2 service__img
+---------------------------------*/
+.service__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38.79vw;
+    height: 26.58vw;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*---------------------------------
+
+    service 768px 幅
+
+---------------------------------*/
+@include mq('tab') {
+    /*  
+        1.1 page__number
+    ---------------------------------*/
+    .page__number {
+        position: absolute;
+        top: 4rem;
+        left: 2.19vw;
+        -webkit-writing-mode: vertical-rl;
+        -moz-writing-mode: tb-rl;
+        -ms-writing-mode: tb-rl;
+        -o-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+
+    .page__number__text {
+        color: #e9e9e9;
+        font-weight: 100;
+        font-size: 12.32vw;
+        & span {
+            color: #60caad;
+        }
+    }
+
+    /*  
+        1.2 service__inner
+    ---------------------------------*/
+    .service__inner {
+        position: relative;
+        width: 80%;
+        height: 60.51vw;
+    }
+
+    /*  
+        1.2.1 service__content
+    ---------------------------------*/
+    .service__content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 31.83vw;
+        & a {
+            display: inline-block;
+            margin-top: 1vw;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s;
+            &:nth-of-type(2) {
+                margin-left: 1vw;
+            }
+            &:hover {
+                color: #60CAAD;
+            }
+        }
+    }
+    
+    .service__title {
+        color: #60CAAD;
+        font-weight: 100;
+        font-size: 4.91vw;
+    }
+    
+    .service__my-name {
+        margin-top: 1vw;
+        color: #e9e9e9;
+        font-weight: 100;
+        font-size: 3.41vw;
+    }
+    
+    .service__text {
+        margin-top: 1vw;
+        color: #e9e9e9;
+        font-weight: 100;
+        font-size: 2.22vw;
+        text-justify: justify;
+    }
+    
+    .fa-globe, .fa-twitter {
+        font-size: 2.7vw;
+    }
+
+    /*  
+        1.2.2 service__img
+    ---------------------------------*/
+    .service__img {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 0);
+        width: 58.72vw;
+        height: 40.36vw;
+    }
+}
+
+/*---------------------------------
+
+  service 414px 幅
+
+---------------------------------*/
+@include mq('sp') {
+    /*  
+        1.1 page__number
+    ---------------------------------*/
+    .page__number__text {
+        font-size: 5.7rem;
+    }
+     /*  
+        1.2 service__inner
+    ---------------------------------*/
+    .service__inner {
+        height: auto;
+    }
+
+    /*  
+        1.2.1 service__content
+    ---------------------------------*/
+    .service__content {
+        position: static;
+        width: 100%;
+        padding-top: 15.84vh;
+    }
+
+    .service__title {
+        font-size: 3.3rem;
+    }
+    
+    .service__my-name {
+        margin-top: 1vw;
+        font-size: 2rem;
+    }
+    
+    .service__text--l {
+        font-size: 3.92vw;
+    }
+
+    .service__text {
+        margin-top: 1vw;
+        font-size: 1rem;
+    }
+    
+    .fa-globe, .fa-twitter {
+        font-size: 4.7vw;
+    }
+
+    /*  
+        1.2.2 service__img
+    ---------------------------------*/
+    .service__img {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 4vh;;
+    }
+}

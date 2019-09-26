@@ -1,0 +1,63 @@
+/*---------------------------------
+
+  footer
+
+    1. footer
+        1.1 footer__inner
+            1.1.1 footer__sns
+    
+---------------------------------*/
+
+/*  
+    1. footer
+---------------------------------*/
+.footer {
+    padding: 70px 0;
+    background-color: #333;
+}
+
+/*  
+    1.1 footer__inner    
+---------------------------------*/
+.footer__inner {
+    width: 100%;
+    max-width: 1080px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    & p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+}
+
+/*  
+    1.1.1 footer__sns  
+---------------------------------*/
+.footer__sns a {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 1.2rem;
+    padding: 0.6rem;
+    border: 2px solid $color-white;
+    border-radius: 50%;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    &:hover {
+        color: #60CAAD;
+    }
+}
+
+/*---------------------------------
+
+  footer 414px 幅
+
+---------------------------------*/
+@include mq('sp') {
+    .footer {
+        padding: 0 0 1.4rem;
+    }
+}

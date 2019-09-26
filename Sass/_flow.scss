@@ -1,0 +1,216 @@
+/*---------------------------------
+
+  flow
+
+  1. flow
+    1.1 page__number
+    1.2 page__inner--flow
+        1.2.1 section__title--flow
+        1.2.2 flow__content
+
+---------------------------------*/
+
+/*  
+    1. flow
+---------------------------------*/
+.flow {
+    position: relative;
+    height: 100vh;
+    background-color: $color-black;
+}
+
+/*  
+    1.1 page__number
+---------------------------------*/
+.page__number {
+    position: absolute;
+    top: 2.19vw;
+    left: 2.19vw;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: tb-rl;
+    -ms-writing-mode: tb-rl;
+    -o-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.page__number__text {
+    color: #e9e9e9;
+    font-weight: 100;
+    font-size: 7.32vw;
+    & span {
+        color: #60caad;
+    }
+}
+
+/*  
+    1.2 page__inner--flow
+---------------------------------*/
+.page__inner--flow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 79.06vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*  
+    1.2.1 section__title--flow
+---------------------------------*/
+.section__title--flow {
+    color: #60CAAD;
+    font-weight: 100;
+    font-size: 2.92vw;
+}
+
+/*  
+    1.2.2 flow__content
+---------------------------------*/
+.flow__content {
+    display: grid;
+    margin-top: 1vw;
+    grid-template-columns: repeat(auto-fit, minmax(20.49vw, 1fr));
+    gap: 3rem;
+}
+
+.flow__item {
+    border: 1px solid $color-gray;
+    padding: 1.46vw;
+}
+
+.flow__item__icon {
+    color: $color-green;
+    font-size: 3.22vw;
+}
+
+.flow__item__title {
+    margin-top: 1vw;
+    color: $color-white;
+    font-size: 1.31vw;
+}
+
+.flow__item__text {
+    margin-top: 1vw;
+    color: $color-gray;
+    font-size: 1.17vw;
+    text-align: left;
+}
+
+
+/*---------------------------------
+
+    flow 768px 幅
+
+---------------------------------*/
+@include mq('tab') {
+    /*  
+        1. flow
+    ---------------------------------*/
+    .flow {
+        height: 100%;
+    }
+
+    /*  
+        1.1 page__number
+    ---------------------------------*/
+    .page__number {
+        position: absolute;
+        top: 4rem;
+        left: 2.19vw;
+        -webkit-writing-mode: vertical-rl;
+        -moz-writing-mode: tb-rl;
+        -ms-writing-mode: tb-rl;
+        -o-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+
+    .page__number__text {
+        color: #e9e9e9;
+        font-weight: 100;
+        font-size: 12.32vw;
+        & span {
+            color: #60caad;
+        }
+    }
+
+    /*  
+        1.2 page__inner--flow
+    ---------------------------------*/
+    .page__inner--flow {
+        position: static;
+        transform: translate(0, 0);
+        max-width: 67.06vw;
+        margin: 0 10vw 0 auto;
+    }
+
+    /*  
+        1.2.1 section__title--flow
+    ---------------------------------*/
+    .section__title--flow {
+        padding-top: 4rem;
+        font-size: 4.92vw;
+    }
+
+    /*  
+        1.2.2 flow__content
+    ---------------------------------*/
+    .flow__content {
+        margin-top: 5vw;
+    }
+
+    .flow__item {
+        height: 34vw;
+    }
+
+    .flow__item__icon {
+        font-size: 4.22vw;
+    }
+    
+    .flow__item__title {
+        font-size: 2.31vw;
+    }
+    
+    .flow__item__text {
+        font-size: 1.9vw;
+        text-align: justify;
+    }
+}
+
+/*---------------------------------
+
+  flow 414px 幅
+
+---------------------------------*/
+@include mq('sp') {
+     /*  
+        1.2 page__inner--flow
+    ---------------------------------*/
+    .page__inner--flow {
+        margin: 0 auto;
+    }
+
+    /*  
+        1.2.1 section__title--flow
+    ---------------------------------*/
+    .section__title--flow {
+        font-size: 33px;
+    }
+
+    /*  
+        1.2.2 flow__content
+    ---------------------------------*/
+    .flow__content {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .flow__item {
+        height: 100%;
+        padding: 2.46vw 6vw 4vw;
+    }
+
+    .flow__item__icon {
+        font-size: 5.22vw;
+    }
+}

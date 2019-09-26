@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//===================================
+// サイトの基本設定
+//===================================
+
+// フォント
+$font-base: Montserrat, "Noto Sans JP", "M PLUS 1p", sans-serif;
+
+// 色の設定
+$color-black: #333;
+$color-white: #e9e9e9;
+$color-gray: #9DA5A0;
+$color-green: #60CAAD;
+
+// レイアウト幅
+$layout-width-inner: 1080px;
+
+// ブレークポイント
+$breakpoints: (
+  "iphonex": "screen and (max-width: 413px)",
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
