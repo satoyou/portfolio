@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="実践コーディング" />
-    <title>実践コーディング</title>
+    <meta name="description" content="portfolio" />
+    <title>portfolio</title>
 
     <!-- reset.css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sato_you0216" />
+    <meta property="og:url" content="https://portfolio.sato-you.com" />
+    <meta property="og:title" content="ポートフォリオ" />
+    <meta property="og:description" content="ポートフォリオが完成しました！" />
+    <meta property="og:image" content="https://portfolio.sato-you.com/img/card.png" />
 
     <!-- drawer.css -->
     <link rel="stylesheet" href="css/drawer.css">
@@ -35,13 +43,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- googlefonts -->
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:100,300,400,500,700,800,900&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
 
+    <!-- fontawesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!-- formrun -->
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 <body>
     
@@ -73,7 +84,7 @@
     <!-- header -->
     <header class="header">
         <div class="inner header__inner">
-            <h2 class="header__link"><a href="#work">Portfolio</a></h2>
+            <h2 class="header__link wow fadeInRight"><a href="#work">Portfolio</a></h2>
             <h2 class="header__title wow fadeInLeft"><span>Yusuke Sato</span></h2>
             <!-- <p class="header__lead">Coder</p> -->
         </div><!-- /header__inner -->
@@ -270,11 +281,11 @@
             <p class="wow fadeInUp">お気軽にご連絡ください。</p>
 
             <!-- contact-form -->
-            <form class="contact-form wow fadeInUp">
-                <input type="text" name="name" placeholder="Your name">
-                <input type="text" name="email" placeholder="Your email">
-                <textarea name="message" placeholder="Your message"></textarea>
-                <input type="submit" value="SEND">
+            <form class="formrun contact-form wow fadeInUp" action="https://form.run/api/v1/r/xtwq0vbib8w6swo0m0vszpjn" method="post">
+                <input name="name" type="text" placeholder="お名前">
+                <input name="email" type="text"  placeholder="メールアドレス">
+                <textarea name="message" placeholder="お問い合わせ内容"></textarea>
+                <input type="submit" value="送信">
             </form><!-- /contact-form -->
 
         </div><!-- /section__inner--work -->
